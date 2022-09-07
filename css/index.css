@@ -107,8 +107,7 @@ h2 span:last-child {
 }
 
 .card .face {
-  width: 400px;
-  height: 400px;
+  height: 220px;
   display: flex;
   justify-content: center;
   align-items: center;
