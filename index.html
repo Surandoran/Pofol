@@ -28,11 +28,6 @@
     aside div {
         cursor: pointer;
     }
-
-    .face-front img {
-        padding: 50px;
-    }
-
 </style>
 
 <script src="js"></script>
@@ -66,7 +61,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        background-color:#92B4EC;
+        background-color:#FFEDED;
         border-radius: 35px;
         "
 >
@@ -98,8 +93,8 @@
             <div style="position: relative; ">
                 <h1 style="font-size: 3em">이름 : 손필욱</h1>
                 <p style="font-size: 2em">email : 70love07@naver.com</p>
-                <p style="font-size: 2em"><a href="https://github.com/Surandoran">GitHub</a></p>
-                <p style="font-size: 2em"><a href="document/1.%20입사지원서(손필욱)%20%203차.pdf">이력서 다운로드</a></p>
+                <p style="font-size: 2em"><a class="download" type="button" href="https://github.com/Surandoran">GitHub</a></p>
+                <p style="font-size: 2em"><a class="download" type="button" href="document/1.%20입사지원서(손필욱)%20%203차.pdf">이력서 다운로드</a></p>
             </div>
         </div>
     </section>
@@ -116,7 +111,9 @@
           "
         >
             <h1>교육</h1>
-            <div style="font-size: 1.5rem; box-shadow: 3px -3px 3px 0px; border-radius: 25px;" >
+            <div style="font-size: 1.5rem;
+  box-shadow: 0 10px 20px rgba(255,50,50,0.19),
+  0 6px 6px rgba(255,50,50,0.23); border-radius: 25px;" >
                 <p>
                     - FastCampus 10개의 프로젝트로 완성하는 백엔드 개발자
                     (Java/Spring) 초격차 패키지 Online
@@ -138,13 +135,17 @@
         >
             <h1>대외활동</h1>
             <div style="font-size: 1.5rem">
-                <div class="card" style="width: 100%; box-shadow: 3px -3px 3px 0px; border-radius: 25px;">
+                <div class="card" style="width: 50%;
+  box-shadow: 0 10px 20px rgba(255,50,50,0.19),
+  0 6px 6px rgba(255,50,50,0.23); border-radius: 25px;">
                         <b>창업</b><br>
                         -피드백 : 평소 일을 할 때도 내가 사장같은 마인드로 일을 해서 그런지 그리 고되진 않았지만, 쉽지만은 않은 길이였습니다.
 
                 </div>
 
-                <div class="card" style="width: 100%; box-shadow: 3px -3px 3px 0px; border-radius: 25px">
+                <div class="card" style="width: 50%;
+  box-shadow: 0 10px 20px rgba(255,50,50,0.19),
+  0 6px 6px rgba(255,50,50,0.23); border-radius: 25px">
                         <b>취업멘토링</b><br>
                         -피드백 : 실제 면접에서 도움되는 정보들을 알려주었고 더 열심히 하는 계기가 되었습니다. 또한 현업에서 일하시는 분에게
                         개발자에 대한 정보를 많이 듣게 되었습니다.
@@ -167,28 +168,28 @@
         <div style="margin-left: 10%;
         display: flex;
         flex-wrap: wrap;
-        width: 400px;
+        width: 900px;
 ">
-            <div class="card">
-                <div class="face face-front" style="width: 25%">
-                    <img class="java" src="img/icons8-java-480.png" height="195" width="auto"/>
+            <div id="javacard" class="card">
+                <div id="javacardimg" class="face face-front" style="width: 25%;">
+                        <img class="java" src="img/icons8-java-480.png" style="width: auto; height: 195px;"/>
                 </div>
-                <div style="display: none" id="java" class="face face-back">
+                <div style="display: none;" id="java" class="face face-back">
                     <p class="card-text">JAVA 언어의 기본적인 문법들을 이해하고 JAVA를 이용하여 팀 프로젝트를 진행중에 있습니다.
                         구현하고자 하는 기능에 맞춰 사용할 수 있습니다.</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="face face-front" style="width: 25%">
-                    <img class="html" src="img/icons8-html-5-480.png" height="195" width="auto"/>
+            <div id="htmlcard" class="card">
+                <div id="htmlcardimg" class="face face-front" style="width: 25%">
+                    <img class="html" src="img/icons8-html-5-480.png" style="width: auto; height: 195px;"/>
                 </div>
                 <div style="display: none" id="html" class="face face-back">
                     <p class="card-text">HTML5를 웹 문서를 제작하는 데 기본적으로 사용할 수 있으며 다양한 태그를 적재적소에 활용하여
                         구현하고자 하는 기능에 맞춰 이용할 수 있습니다.</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="face face-front" style="width: 25%">
+            <div id="csscard" class="card">
+                <div id="csscardimg" class="face face-front" style="width: 25%">
                     <img class="css1" src="img/icons8-css3-480.png" height="195" width="auto"/>
                 </div>
                 <div style="display: none" id="css1" class="face face-back">
@@ -196,8 +197,8 @@
                         웹 문서를 보다 동적이게 보이도록 응용할 수 있습니다.</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="face face-front" style="width: 25%">
+            <div id="jscard" class="card">
+                <div id="jscardimg" class="face face-front" style="width: 25%">
                     <img class="js" src="img/icons8-javascript-480.png" height="195" width="auto"/>
                 </div>
                 <div style="display: none" id="js" class="face face-back">
@@ -206,24 +207,24 @@
                         화면상의 객체를 즉각적으로 띄울 수 있게 사용할 수 있습니다.</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="face face-front" style="width: 25%">
+            <div class="card" id="springcard">
+                <div id="springcardimg" class="face face-front" style="width: 25%">
                     <img class="spring" src="img/icons8-spring-logo-480.png" height="195" width="auto"/>
                 </div>
                 <div style="display: none" id="spring" class="face face-back">
                     <p class="card-text">스프링의 개념과 데이터베이스, ORM 연동 및 트랜잭션 관리와 MVC패턴을 활용하여 웹 페이지를 제작할 수 있습니다</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="face face-front" style="width: 25%">
+            <div class="card" id="jspcard">
+                <div id="jspcardimg" class="face face-front" style="width: 25%">
                     <img class="jsp" src="img/icons8-jsp-100.png" height="195" width="auto"/>
                 </div>
                 <div style="display: none" id="jsp" class="face face-back">
                     <p class="card-text">둘의 기본적인 문법과 사용법을 익혀 웹 페이지를 제작할 수 있습니다. 기본적인 CRUD를 구현할 수 있습니다.</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="face face-front" style="width: 25%">
+            <div class="card" id="githubcard">
+                <div id="githubcardimg" class="face face-front" style="width: 25%">
                     <img class="github" src="img/icons8-github-500.png" height="195" width="auto"/>
                 </div>
                 <div style="display: none" id="github" class="face face-back">
@@ -232,18 +233,13 @@
                         진행했습니다. 또한 개인 프로젝트 또한 관리하고 있습니다</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="face face-front" style="width: 25%">
+            <div class="card" id="sqlcard">
+                <div id="sqlcardimg" class="face face-front" style="width: 25%">
                     <img class="sql" src="img/icons8-sql-60.png" height="195" width="auto"/>
                 </div>
                 <div style="display: none" id="sql" class="face face-back">
                     <p class="card-text">SQL 기본 쿼리문을 활용할 수 있고 DBMS로는 Oracle과 MySQL을 사용할 수 있습니다.</p>
                 </div>
-            </div>
-            <div style="position: absolute; display: inline-block; width: 500px; height: 400px; margin-top: 250px; left: 750px;
-
-        box-shadow: 3px -3px 3px 0px;">
-                <p class="item-one">카드를 뒤집어 주세요</p>
             </div>
         </div>
     </section>
@@ -320,169 +316,169 @@
     </section>
 
 </main>
-<script>
-    window.addEventListener('scroll', () => {
-        //스크롤을 할 때마다 로그로 현재 스크롤의 위치가 찍혀나온다.
-        console.log(window.scrollX, window.scrollY);
-    });
+<!--<script>-->
+<!--    window.addEventListener('scroll', () => {-->
+<!--        //스크롤을 할 때마다 로그로 현재 스크롤의 위치가 찍혀나온다.-->
+<!--        console.log(window.scrollX, window.scrollY);-->
+<!--    });-->
 
 
-    $(document).ready(function () {
-        $(window).scroll(function () {
-            var scroll = $(window).scrollTop();
-            if (scroll <= 700) {
-                $("#d1").css("color", "#FFFFFF");
-            } else {
-                $("#d1").css("color", "#000000");
-            }
-            if (scroll > 700 && scroll < 2300) {
-                $("#d2").css("color", "#FFFFFF");
+<!--    $(document).ready(function () {-->
+<!--        $(window).scroll(function () {-->
+<!--            var scroll = $(window).scrollTop();-->
+<!--            if (scroll <= 700) {-->
+<!--                $("#d1").css("color", "#FFFFFF");-->
+<!--            } else {-->
+<!--                $("#d1").css("color", "#000000");-->
+<!--            }-->
+<!--            if (scroll > 700 && scroll < 2300) {-->
+<!--                $("#d2").css("color", "#FFFFFF");-->
 
-            } else {
-                $("#d2").css("color", "#000000");
+<!--            } else {-->
+<!--                $("#d2").css("color", "#000000");-->
 
-            }
-            if (scroll > 2300 && scroll < 4400) {
-                $("#d2").css("color", "#000000");
-                $("#d3").css("color", "#FFFFFF");
-            } else {
-                $("#d3").css("color", "#000000");
-            }
-            if (scroll > 4400 && scroll < 6300) {
-                $("#d3").css("color", "#000000");
-                $("#d4").css("color", "#FFFFFF");
-            } else {
-                $("#d4").css("color", "#000000");
-            }
-            if (scroll > 6300) {
-                $("#d4").css("color", "#000000");
-                $("#d5").css("color", "#FFFFFF");
-            } else {
-                $("#d5").css("color", "#000000");
-            }
-            if (scroll > 6300) {
-                $("#d5").css("color", "#FFFFFF");
-            }
-        })
-    })
+<!--            }-->
+<!--            if (scroll > 2300 && scroll < 4400) {-->
+<!--                $("#d2").css("color", "#000000");-->
+<!--                $("#d3").css("color", "#FFFFFF");-->
+<!--            } else {-->
+<!--                $("#d3").css("color", "#000000");-->
+<!--            }-->
+<!--            if (scroll > 4400 && scroll < 6300) {-->
+<!--                $("#d3").css("color", "#000000");-->
+<!--                $("#d4").css("color", "#FFFFFF");-->
+<!--            } else {-->
+<!--                $("#d4").css("color", "#000000");-->
+<!--            }-->
+<!--            if (scroll > 6300) {-->
+<!--                $("#d4").css("color", "#000000");-->
+<!--                $("#d5").css("color", "#FFFFFF");-->
+<!--            } else {-->
+<!--                $("#d5").css("color", "#000000");-->
+<!--            }-->
+<!--            if (scroll > 6300) {-->
+<!--                $("#d5").css("color", "#FFFFFF");-->
+<!--            }-->
+<!--        })-->
+<!--    })-->
 
-    $(document).ready(function () {
-        $('#d1').click(function () {
-            var offset = $('#Home').offset();
-            $('html').animate({scrollTop: offset.top}, 400);
-        });
-    });
+<!--    $(document).ready(function () {-->
+<!--        $('#d1').click(function () {-->
+<!--            var offset = $('#Home').offset();-->
+<!--            $('html').animate({scrollTop: offset.top}, 400);-->
+<!--        });-->
+<!--    });-->
 
-    $(document).ready(function () {
-        $('#d2').click(function () {
-            var offset = $('#About').offset();
-            $('html').animate({scrollTop: offset.top}, 400);
-        });
-    });
+<!--    $(document).ready(function () {-->
+<!--        $('#d2').click(function () {-->
+<!--            var offset = $('#About').offset();-->
+<!--            $('html').animate({scrollTop: offset.top}, 400);-->
+<!--        });-->
+<!--    });-->
 
-    $(document).ready(function () {
-        $('#d3').click(function () {
-            var offset = $('#Skills').offset();
-            $('html').animate({scrollTop: offset.top}, 400);
-        });
-    });
+<!--    $(document).ready(function () {-->
+<!--        $('#d3').click(function () {-->
+<!--            var offset = $('#Skills').offset();-->
+<!--            $('html').animate({scrollTop: offset.top}, 400);-->
+<!--        });-->
+<!--    });-->
 
-    $(document).ready(function () {
-        $('#d4').click(function () {
-            var offset = $('#Project').offset();
-            $('html').animate({scrollTop: offset.top}, 400);
-        });
-    });
+<!--    $(document).ready(function () {-->
+<!--        $('#d4').click(function () {-->
+<!--            var offset = $('#Project').offset();-->
+<!--            $('html').animate({scrollTop: offset.top}, 400);-->
+<!--        });-->
+<!--    });-->
 
-    $(document).ready(function () {
-        $('#d5').click(function () {
-            var offset = $('#Contacts').offset();
-            $('html').animate({scrollTop: offset.top}, 400);
-        });
-    });
+<!--    $(document).ready(function () {-->
+<!--        $('#d5').click(function () {-->
+<!--            var offset = $('#Contacts').offset();-->
+<!--            $('html').animate({scrollTop: offset.top}, 400);-->
+<!--        });-->
+<!--    });-->
 
-    $(document).ready(function () {
-        $('.java').hover(function () {
-            if ($('.java').hover) {
-                $('#java').css('display', 'inline-block');
-                $("#java").insertAfter('.item-one');
-            }
-        }, function () {
-            $('#java').css('display', 'none');
+<!--    $(document).ready(function () {-->
+<!--        $('.java').hover(function () {-->
+<!--            if ($('.java').hover) {-->
+<!--                $('#java').css('display', 'inline-block');-->
+<!--                $("#java").insertAfter('.item-one');-->
+<!--            }-->
+<!--        }, function () {-->
+<!--            $('#java').css('display', 'none');-->
 
-        });
-        $('.html').hover(function () {
-            if ($('.html').hover) {
-                $('#html').css('display', 'inline-block');
-                $("#html").insertAfter('.item-one');
-            }
-        }, function () {
-            $('#html').css('display', 'none');
+<!--        });-->
+<!--        $('.html').hover(function () {-->
+<!--            if ($('.html').hover) {-->
+<!--                $('#html').css('display', 'inline-block');-->
+<!--                $("#html").insertAfter('.item-one');-->
+<!--            }-->
+<!--        }, function () {-->
+<!--            $('#html').css('display', 'none');-->
 
-        });
+<!--        });-->
 
-        $('.css1').hover(function () {
-            if ($('.css1').hover) {
-                $('#css1').css('display', 'inline-block');
-                $("#css1").insertAfter('.item-one');
-            }
-        }, function () {
-            $('#css1').css('display', 'none');
+<!--        $('.css1').hover(function () {-->
+<!--            if ($('.css1').hover) {-->
+<!--                $('#css1').css('display', 'inline-block');-->
+<!--                $("#css1").insertAfter('.item-one');-->
+<!--            }-->
+<!--        }, function () {-->
+<!--            $('#css1').css('display', 'none');-->
 
-        });
+<!--        });-->
 
-        $('.js').hover(function () {
-            if ($('.js').hover) {
-                $('#js').css('display', 'inline-block');
-                $("#js").insertAfter('.item-one');
-            }
-        }, function () {
-            $('#js').css('display', 'none');
+<!--        $('.js').hover(function () {-->
+<!--            if ($('.js').hover) {-->
+<!--                $('#js').css('display', 'inline-block');-->
+<!--                $("#js").insertAfter('.item-one');-->
+<!--            }-->
+<!--        }, function () {-->
+<!--            $('#js').css('display', 'none');-->
 
-        });
+<!--        });-->
 
-        $('.spring').hover(function () {
-            if ($('.spring').hover) {
-                $('#spring').css('display', 'inline-block');
-                $("#spring").insertAfter('.item-one');
-            }
-        }, function () {
-            $('#spring').css('display', 'none');
+<!--        $('.spring').hover(function () {-->
+<!--            if ($('.spring').hover) {-->
+<!--                $('#spring').css('display', 'inline-block');-->
+<!--                $("#spring").insertAfter('.item-one');-->
+<!--            }-->
+<!--        }, function () {-->
+<!--            $('#spring').css('display', 'none');-->
 
-        });
-        $('.jsp').hover(function () {
-            if ($('.jsp').hover) {
-                $('#jsp').css('display', 'inline-block');
-                $("#jsp").insertAfter('.item-one');
-            }
-        }, function () {
-            $('#jsp').css('display', 'none');
+<!--        });-->
+<!--        $('.jsp').hover(function () {-->
+<!--            if ($('.jsp').hover) {-->
+<!--                $('#jsp').css('display', 'inline-block');-->
+<!--                $("#jsp").insertAfter('.item-one');-->
+<!--            }-->
+<!--        }, function () {-->
+<!--            $('#jsp').css('display', 'none');-->
 
-        });
+<!--        });-->
 
-        $('.github').hover(function () {
-            if ($('.github').hover) {
-                $('#github').css('display', 'inline-block');
-                $("#github").insertAfter('.item-one');
-            }
-        }, function () {
-            $('#github').css('display', 'none');
+<!--        $('.github').hover(function () {-->
+<!--            if ($('.github').hover) {-->
+<!--                $('#github').css('display', 'inline-block');-->
+<!--                $("#github").insertAfter('.item-one');-->
+<!--            }-->
+<!--        }, function () {-->
+<!--            $('#github').css('display', 'none');-->
 
-        });
+<!--        });-->
 
-        $('.sql').hover(function () {
-            if ($('.sql').hover) {
-                $('#sql').css('display', 'inline-block');
-                $("#sql").insertAfter('.item-one');
-            }
-        }, function () {
-            $('#sql').css('display', 'none');
+<!--        $('.sql').hover(function () {-->
+<!--            if ($('.sql').hover) {-->
+<!--                $('#sql').css('display', 'inline-block');-->
+<!--                $("#sql").insertAfter('.item-one');-->
+<!--            }-->
+<!--        }, function () {-->
+<!--            $('#sql').css('display', 'none');-->
 
-        });
+<!--        });-->
 
 
-    });
+<!--    });-->
 
-</script>
+<!--</script>-->
 </body>
 </html>
