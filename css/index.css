@@ -4,13 +4,15 @@
 }
 html, body {
   height: 100%;
+  letter-spacing: 3px;
+  word-spacing: 3px;
 }
 
 body {
   font-family: BM;
   background: #FFEDED;
   align-items: center;
-  color: #777777;
+  color: #B3541E;
 }
 
 .container {
@@ -29,7 +31,7 @@ h1, h2 {
 h1 span, h2 span {
   width: 100%;
   float: left;
-  color: #ffffff;
+  color: #362222;
   -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
   clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
   transform: translateY(-50px);
